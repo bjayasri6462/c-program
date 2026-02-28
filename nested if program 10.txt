@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int rows = 4;
+
+    for (int i = 1; i <= rows; i++) {
+        char ch;
+
+        
+        for (ch = 'A'; ch < 'A' + i; ch++) {
+            printf("%c", ch);
+        }
+
+        
+        for (ch = 'A' + i - 2; ch >= 'A'; ch--) {
+            printf("%c", ch);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
