@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int r, c;
+    scanf("%d %d", &r, &c);
+
+    int a[100][100];
+
+    
+    for(int i = 0; i < r; i++) {
+        for(int j = 0; j < c; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    int minSum = 1000000;
+    int minIndex = -1;
+
+    for(int i = 0; i < r; i++) {
+        int sum = 0;
+
+        for(int j = 0; j < c; j++) {
+            sum += a[i][j];
+        }
+
+        if(sum != 0 && sum < minSum) {
+            minSum = sum;
+            minIndex = i;
+        }
+    }
+
+    printf("%d", minIndex);
+
+    return 0;
+}
