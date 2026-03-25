@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+// Function to calculate digit sum
+int digitSum(int N) {
+    int sum = 0;
+    
+    while (N > 0) {
+        sum += N % 10;  // get last digit
+        N /= 10;        // remove last digit
+    }
+    
+    return sum;
+}
+
+int main() {
+    int N;
+    
+    // Input
+    scanf("%d", &N);
+    
+    // Function call
+    int result = digitSum(N);
+    
+    // Output
+    printf("%d", result);
+    
+    return 0;
+}
